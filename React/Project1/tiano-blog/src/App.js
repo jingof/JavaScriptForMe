@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import Home from './Home';
+import HomeJson from './HomeJson';
 
 function App() {
+  const title = "Welcome to the new blog!";
+  const likes = 50;
+  const person = {name:"Francis", age:30};
+  const googleSite = "https//www.google.com";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar title="Home"/>
+      <div className='Content'>
+        {/*<Home/>*/}
+        <HomeJson />
+        {/*<h1>{title}</h1>
+        <p1>Liked by {likes} people.</p1>
+        <p>{[1,2,3,4,6]}</p>
+
+        <a href={googleSite}>Google Site</a>*/}
+
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 
 
-
 let age = 20;
 console.log("Age is ",age);
 if(true)
