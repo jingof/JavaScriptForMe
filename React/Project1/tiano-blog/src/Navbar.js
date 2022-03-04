@@ -1,8 +1,8 @@
-console.log("1");
+import { Link } from 'react-router-dom';
 
 const Navbar = ({title}) => {
 
-    const navItems = ['Home', 'Search', 'Blog','About us'];
+    const navItems = ['Home', 'Add', 'Search', 'About us', 'Blog'];
 
     let navs = ``;
     navItems.map(function(item){
@@ -25,9 +25,11 @@ const Navbar = ({title}) => {
             <h1>The Tiano Blog</h1>
             <div className="links">
                 
-            {navItems.map((item) =>(
-                <a href="">{item}</a>
-            ))}
+            {/*navItems.map((item) =>(
+                <Link to="">{item}</Link>
+            ))*/}
+            <Link to="/">Home</Link>
+            <Link to="/create">Add Item</Link>
                 
             </div>
         </nav>
