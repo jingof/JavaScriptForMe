@@ -4,15 +4,14 @@ const ProductList = (props) => {
     return (
         <section className="section">
 
-            <h2>{title}</h2>
+            <h2><b>{title}</b></h2>
             
             <div className="ac-center box">
                 {items.map((item) => (
                     <div className="ac">
                         <div className="img-cover" style={{     
                             height:'80%',
-                        }}>
-                            
+                        }}>            
                              <img src={require(`${item.path}`)} alt=""/> 
                         </div>
                         {/*<a href="#" style={{textDecoration:'none'}}>*/}             
@@ -23,9 +22,9 @@ const ProductList = (props) => {
                         }}><b>{item.name} </b></p>        
                         <div className="rating">
                          <p> {item.rating}/5 </p>
-                            <b>US $ </b><i>{item.price}</i>
+                            <b>US $ </b> {item.price} 
                         </div>   
-                        <button onClick={() => props.handleProductDelete(item.id)}>Delete</button>                 
+                        {/*<button onClick={() => props.handleProductDelete(item.id)}>Delete</button>  */}               
                     </div>
                 ))}
             </div>

@@ -11,12 +11,12 @@ const BlogList = (props) => {
                     <h2>{blog.title}</h2>
                     <p>Written by {blog.author}</p>
                     {/*</a>*/}
-                    <button onClick={() => props.handleBlogDelete(blog.id)}>Delete</button>
+                    {/*<button onClick={() => props.handleBlogDelete(blog.id)}>Delete</button>*/}
                 </div>
                 
                 
             ))}
-        <button onClick={() => props.handleAllBlogsDelete()}>Delete</button>
+        {/*<button onClick={() => props.handleAllBlogsDelete()}>Delete</button>*/}
         </div>
      );
 }
