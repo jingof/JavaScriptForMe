@@ -22,14 +22,16 @@ const Navbar = ({title}) => {
     
     return ( 
         <nav className="navbar">
-            <h1>The Tiano Blog</h1>
+            <h1>Trade It</h1>
             <div className="links">
                 
             {/*navItems.map((item) =>(
                 <Link to="">{item}</Link>
             ))*/}
             <Link to="/">Home</Link>
-            <Link to="/create">Add Item</Link>
+            <Link to="/create">Create</Link>
+            <Link to="/addItem">Add Item</Link>
+            <Link to="/viewproducts">View</Link>
                 
             </div>
         </nav>

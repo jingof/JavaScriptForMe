@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const ProductList = (props) => {
     const items = props.products;
     let title = props.title;
@@ -8,7 +9,8 @@ const ProductList = (props) => {
             
             <div className="ac-center box">
                 {items.map((item) => (
-                    <div className="ac">
+                    <div className="ac" key={item.id}>
+                        <Link to={`/products/${item.id}`} style={{textDecoration:'none',color:'black'}}>
                         <div className="img-cover" style={{     
                             height:'80%',
                         }}>            
@@ -25,7 +27,9 @@ const ProductList = (props) => {
                             <b>US $ </b> {item.price} 
                         </div>   
                         {/*<button onClick={() => props.handleProductDelete(item.id)}>Delete</button>  */}               
+                    </Link>
                     </div>
+                    
                 ))}
             </div>
         </section>

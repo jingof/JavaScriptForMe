@@ -8,7 +8,7 @@ const useFetch = (url) => {
     useEffect(() => {
         const abortCont = new AbortController();
         setTimeout(() => {
-            console.log("Done waiting");
+            //console.log("Done waiting");
             fetch(url, { signal: abortCont.signal })
                 .then(res => {
                     if (!res.ok) {
@@ -33,7 +33,7 @@ const useFetch = (url) => {
                 });
         }, 1000);
         return () => {
-            console.log("Wrong Url, don't Fetch");
+            //console.log("Wrong Url, don't Fetch");
             abortCont.abort();
         };
     }, [url]);
